@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>HTL Braunau Ball</title>
+    <meta
+      name="description"
+      content="Hier entsteht die neue Ball Website."
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="content" aria-label="Coming Soon">
+        <img
+          class="logo"
+          src="./assets/logo.svg"
+          alt="HTL Braunau Ball Logo"
+        />
+
+        <h1>HTL Braunau Ball</h1>
+        <p>
+          Der HTL Braunau Ball kommt bald. Hier findest du in Kürze alle
+          wichtigen Informationen zu Datum, Ort, Karten und Programm.
+        </p>
+
+        <div class="countdown" aria-label="Countdown">
+          <div class="countdown-item">
+            <strong id="days">00</strong>
+            <span>Days</span>
+          </div>
+          <div class="countdown-item">
+            <strong id="hours">00</strong>
+            <span>Hours</span>
+          </div>
+          <div class="countdown-item">
+            <strong id="minutes">00</strong>
+            <span>Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <strong id="seconds">00</strong>
+            <span>Seconds</span>
+          </div>
+        </div>
+
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/htlballbraunau/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="instagram-icon"
+            src="./assets/instagram.png"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>Folge uns auf Instagram</span>
+        </a>
+      </section>
+    </main>
+
+    <script>
+      const targetDate = new Date("2027-02-02T23:59:59+01:00");
+      const parts = {
+        days: document.getElementById("days"),
+        hours: document.getElementById("hours"),
+        minutes: document.getElementById("minutes"),
+        seconds: document.getElementById("seconds"),
+      };
+
+      function updateCountdown() {
+        const distance = Math.max(targetDate - new Date(), 0);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        parts.days.textContent = String(days).padStart(2, "0");
+        parts.hours.textContent = String(hours).padStart(2, "0");
+        parts.minutes.textContent = String(minutes).padStart(2, "0");
+        parts.seconds.textContent = String(seconds).padStart(2, "0");
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
