@@ -66,12 +66,31 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  margin: 0 0 35px;
+  color: var(--muted);
+  font-size: clamp(14px, 2.2vw, 16px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 p {
   max-width: 58ch;
   margin: 0 auto;
+  margin-bottom: 35px;
   color: var(--text);
-  font-size: clamp(15px, 2vw, 17px);
+  font-size: clamp(15px, 2vw, 18px);
   line-height: 1.8;
+}
+
+.save-the-date {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: clamp(14px, 2.2vw, 20px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .countdown {
