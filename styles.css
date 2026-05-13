@@ -1,10 +1,10 @@
 :root {
-  --bg: #fbf8f6;
-  --bg-accent-1: rgba(243, 214, 228, 0.35);
-  --bg-accent-2: rgba(230, 236, 255, 0.35);
-  --text: rgba(17, 24, 39, 0.92);
-  --muted: rgba(17, 24, 39, 0.64);
-  --card: rgba(255, 255, 255, 0.72);
+  --bg: #000000;
+  --bg-accent-1: rgba(160, 93, 37, 0.35);
+  --bg-accent-2: rgba(230, 236, 255, 0.148);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.503);
+  --card: rgba(255, 255, 255, 0.1);
   --border: rgba(17, 24, 39, 0.1);
 }
 
@@ -47,10 +47,13 @@ body {
 
 .logo {
   width: min(260px, 80vw);
+  aspect-ratio: 1;
   height: auto;
   margin: 0 auto 28px;
   display: block;
-  border-radius: 64px;
+  object-fit: contain;
+  border-radius: 50%;
+  overflow: hidden;
   box-shadow: 0 24px 60px rgba(107, 79, 69, 0.12);
 }
 
@@ -130,7 +133,7 @@ p {
 
 .instagram-link:hover {
   transform: translateY(-0.5px);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(36, 36, 36, 0.9);
   border-color: rgba(17, 24, 39, 0.18);
   box-shadow: 0 10px 24px rgba(107, 79, 69, 0.12);
 }
